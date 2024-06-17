@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elevator UI</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <div id="background-window">
+        <img src="images/background.jpg" alt="Background Image" id="background-image">
+        <div class="elevator-ui">
+            <div class="display">
+                <i id="direction-up" class="fas fa-caret-up arrow"></i>
+                <i id="direction-down" class="fas fa-caret-down arrow"></i>
+                <div class="floor-background">
+                    <div id="current-floor">
+                        <span id="digit-1">1</span><span id="digit-2"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="floor-columns" id="floor-columns"></div>
+            <button id="stop-button" class="stop-button">STOP</button>
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button"><i class="fas fa-times"></i></span>
+            <h2>Restricted Access</h2>
+            <label for="password-input">Enter access code:</label>
+            <input type="password" id="password-input" placeholder="Enter access code">
+            <button id="submit-password">Submit</button>
+            <div id="error-message" class="error-message"></div>
+        </div>
+    </div>
+
+    <audio id="button-sound" src="sounds/button.ogg"></audio>
+    <audio id="arrival-sound" src="sounds/arrival.ogg"></audio>
+    <audio id="ambient-sound" src="sounds/ambient.ogg" loop></audio>
+</body>
+</html>
